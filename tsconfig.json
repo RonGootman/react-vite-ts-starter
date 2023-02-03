@@ -23,6 +23,9 @@
     "vite.config.ts",
     ".eslintrc.cjs", 
     "src", 
-    "tests/setup.ts"  ],
+    "tests/setup.ts",
+    // "cypress/cypress.config.ts"
+    "cypress"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
