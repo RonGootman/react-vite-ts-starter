@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ErrorBoundary } from 'react-error-boundary';
 import App from '@/App';
 
 const router = createBrowserRouter([
@@ -12,6 +13,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ErrorBoundary fallbackRender={() => <div>error boundary</div>}>
+      <RouterProvider router={router} />
+    </ErrorBoundary>
   </React.StrictMode>
 );
